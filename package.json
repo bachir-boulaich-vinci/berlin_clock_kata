@@ -1,0 +1,15 @@
+{
+  "name": "berlin_clock_kata",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "jasmine": "^5.4.0"
+  }
+}
