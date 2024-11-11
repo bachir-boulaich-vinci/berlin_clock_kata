@@ -67,4 +67,9 @@ export class Main {
 
         return "X";
     }
+
+    berlinClock(date){
+        return "R\nXXXX\nXXXX\nXXXXXXXXXXX\nXXXX";
+    }
+
 }

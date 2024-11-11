@@ -190,4 +190,10 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("X");
     }); 
+
+    it("Berlin clock: when time equal 00:00:00", function(){
+        const result = main.berlinClock(new Date("2024-11-01T00:00:00"));
+
+        expect(result).toBe("R\nXXXX\nXXXX\nXXXXXXXXXXX\nXXXX");
+    }); 
 });
