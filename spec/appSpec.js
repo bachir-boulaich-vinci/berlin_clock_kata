@@ -98,9 +98,16 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("XXXX");
     });
+
     it("Simple hours line: When hours are equals to 1", function(){
         const result = main.getSimpleHoursLine(new Date("2024-11-01T01:00:00").getHours());
 
         expect(result).toBe("RXXX");
+    });
+    
+    it("Simple hours line: When hours are equals to 2", function(){
+        const result = main.getSimpleHoursLine(new Date("2024-11-01T02:00:00").getHours());
+
+        expect(result).toBe("RRXX");
     });
 });
