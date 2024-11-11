@@ -50,4 +50,10 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("JJJX");
     });
+
+    it("Five minutes line: When minutes are equals to 0", function(){
+        const result = main.getFiveMinutesLine(new Date("2024-11-01T09:00:00").getMinutes()); 
+
+        expect(result).toBe("XXXXXXXXXXX");
+    });
 });
