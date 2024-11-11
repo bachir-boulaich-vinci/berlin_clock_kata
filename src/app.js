@@ -58,6 +58,7 @@ export class Main {
     }
 
     getFiveHoursLine(hours){
-        return "XXXX"
+        if (hours === 5) return "RXXX";
+        return "XXXX";
     }
 }
