@@ -19,5 +19,11 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
         const result = main.getSimpleMinutesLine(2);
 
         expect(result).toBe("JJXX");
-    })
+    });
+
+    it("When minutes are equals to 3", function(){
+        const result = main.getSimpleMinutesLine(3);
+
+        expect(result).toBe("JJJX");
+    });
 });
