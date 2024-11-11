@@ -8,4 +8,10 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("XXXX");
     });
+
+    it("When minutes are equals to 1", function(){
+        const result = main.getSimpleMinutesLine(1);
+
+        expect(result).toBe("JXXX");
+    });
 });
