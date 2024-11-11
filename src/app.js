@@ -42,10 +42,10 @@ export class Main {
 
     getSimpleHoursLine(hours){
         let redCounter = hours % 5;
-        return this.turnOnSimpleHoursLight(redCounter);
+        return this.turnOnHoursLight(redCounter);
     }
 
-    turnOnSimpleHoursLight(redCounter) {
+    turnOnHoursLight(redCounter) {
         let result = "";
         for (let i = 1; i <= 4; i++) {
             if (redCounter >= i) {
@@ -59,14 +59,6 @@ export class Main {
 
     getFiveHoursLine(hours){
         let redCounter = Math.floor(hours / 5);
-        let result = "";
-        for (let i = 1; i <= 4; i++) {
-            if (redCounter >= i) {
-                result += "R";
-            } else {
-                result += "X";
-            }
-        }
-        return result;
+        return this.turnOnHoursLight(redCounter);
     }
 }
