@@ -69,7 +69,13 @@ export class Main {
     }
 
     berlinClock(date){
-        return "R\nXXXX\nXXXX\nXXXXXXXXXXX\nXXXX";
+        let result = "";
+        result += this.getSecondsLine(date.getSeconds()) + "\n";
+        result += this.getFiveHoursLine(date.getHours()) + "\n";
+        result += this.getSimpleHoursLine(date.getHours()) + "\n";
+        result += this.getFiveMinutesLine(date.getMinutes()) + "\n";
+        result += this.getSimpleMinutesLine(date.getMinutes());
+        return result;
     }
 
 }
