@@ -41,16 +41,16 @@ export class Main {
     }
 
     getSimpleHoursLine(hours){
-        // if (hours === 1) return "RXXX";
-        // if (hours === 2) return "RRXX";
-        // if (hours === 3) return "RRRX";
-        // if (hours === 4) return "RRRR";
         let redCounter = hours % 5;
-        let result ="";
-        for(let i = 1; i<= 4;i++){
-            if (redCounter >= i){
+        return this.turnOnSimpleHoursLight(redCounter);
+    }
+
+    turnOnSimpleHoursLight(redCounter) {
+        let result = "";
+        for (let i = 1; i <= 4; i++) {
+            if (redCounter >= i) {
                 result += "R";
-            }else{
+            } else {
                 result += "X";
             }
         }
