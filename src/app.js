@@ -25,10 +25,16 @@ export class Main {
     }
 
     getFiveMinutesLine(minutes){
-        if(minutes === 5) return "JXXXXXXXXXX";
-        if(minutes === 10) return "JJXXXXXXXXX";
-        if(minutes === 15) return "JJRXXXXXXXX";
-        if(minutes === 20) return "JJRJXXXXXXX";
-        return "XXXXXXXXXXX";
+        let yellowCounter = Math.floor(minutes / 5);
+        let result = "";
+        for(let i = 1; i <= 11; i++){
+            if(yellowCounter >= i){
+                if(i % 3 === 0) result += "R";
+                else result += "J";
+            } else{
+                result += "X";
+            }
+        }
+        return result;
     }
 }
