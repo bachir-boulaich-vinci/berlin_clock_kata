@@ -43,6 +43,7 @@ export class Main {
     getSimpleHoursLine(hours){
         if (hours === 1) return "RXXX";
         if (hours === 2) return "RRXX";
+        if (hours === 3) return "RRRX";
     
         return "XXXX";
     }
