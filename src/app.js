@@ -61,4 +61,8 @@ export class Main {
         let redCounter = Math.floor(hours / 5);
         return this.turnOnHoursLight(redCounter);
     }
+
+    getSecondsLine(seconds){
+        return "X";
+    }
 }

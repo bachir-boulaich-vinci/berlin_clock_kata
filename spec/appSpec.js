@@ -165,4 +165,9 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("RRRR");
     });
+    it("Seconds line: when seconds equal 0", function(){
+        const result = main.getSecondsLine(new Date("2024-11-01T23:00:00").getSeconds());
+
+        expect(result).toBe("X");
+    });
 });
