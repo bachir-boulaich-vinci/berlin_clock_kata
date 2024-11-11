@@ -39,4 +39,8 @@ export class Main {
         else result += "J";
         return result;
     }
+
+    getSimpleHoursLine(hours){
+        return "XXXX";
+    }
 }

@@ -92,4 +92,10 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("JJRJJRJJRXX");
     });
+
+    it("Simple hours line: When hours are equals to 0", function(){
+        const result = main.getSimpleHoursLine(0);
+
+        expect(result).toBe("XXXX");
+    });
 });
