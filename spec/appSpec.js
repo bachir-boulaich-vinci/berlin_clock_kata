@@ -130,4 +130,9 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("RXXX");
     });
+    it("Simple hours line: When hours are equals to 13", function(){
+        const result = main.getSimpleHoursLine(new Date("2024-11-01T13:00:00").getHours());
+
+        expect(result).toBe("RRRX");
+    });
 });
