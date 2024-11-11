@@ -63,6 +63,7 @@ export class Main {
     }
 
     getSecondsLine(seconds){
-        return "X";
+        if(seconds===1) return "X";
+        return "R";
     }
 }
