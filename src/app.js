@@ -1,25 +1,18 @@
 export class Main {
     getSimpleMinutesLine(minutes){
         let yellowCounter = minutes % 5;
-        let offCounter = 4 - yellowCounter;
+        return this.turnOnSimpleMinutesLights(yellowCounter);
+
+    }
+
+    turnOnSimpleMinutesLights(yellowCounter) {
         let result = "";
-        result = this.turnOnYellowLights(yellowCounter, result);
-        result = this.turnOffYellowLights(offCounter, result);
-        return result;
-    }
-
-    turnOffYellowLights(offCounter, result) {
-        while (offCounter > 0) {
-            result += "X";
-            offCounter--;
-        }
-        return result;
-    }
-
-    turnOnYellowLights(yellowCounter, result) {
-        while (yellowCounter > 0) {
-            result += "J";
-            yellowCounter--;
+        for (let i = 1; i <= 4; i++) {
+            if (yellowCounter >= i) {
+                result += "J";
+            } else {
+                result += "X";
+            }
         }
         return result;
     }
