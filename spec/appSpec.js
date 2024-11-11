@@ -135,4 +135,9 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("RRRX");
     });
+    it("Five hours line: When hours are equals to 0", function(){
+        const result = main.getFiveHoursLine(new Date("2024-11-01T00:00:00").getHours());
+
+        expect(result).toBe("XXXX");
+    });
 });
