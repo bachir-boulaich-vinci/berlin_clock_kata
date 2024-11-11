@@ -150,10 +150,14 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("RXXX");
     });
-
     it("Five hours line: When hours are equals to 13", function(){
         const result = main.getFiveHoursLine(new Date("2024-11-01T13:00:00").getHours());
 
         expect(result).toBe("RRXX");
+    });
+    it("Five hours line: When hours are equals to 18", function(){
+        const result = main.getFiveHoursLine(new Date("2024-11-01T18:00:00").getHours());
+
+        expect(result).toBe("RRRX");
     });
 });
