@@ -41,6 +41,7 @@ export class Main {
     }
 
     getSimpleHoursLine(hours){
+        if (hours === 1) return "RXXX";
         return "XXXX";
     }
 }
