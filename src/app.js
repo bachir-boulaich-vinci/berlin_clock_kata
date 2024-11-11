@@ -26,6 +26,7 @@ export class Main {
 
     getFiveMinutesLine(minutes){
         if(minutes === 5) return "JXXXXXXXXXX";
+        if(minutes === 10) return "JJXXXXXXXXX";
         return "XXXXXXXXXXX";
     }
 }
