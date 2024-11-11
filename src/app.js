@@ -28,6 +28,7 @@ export class Main {
         if(minutes === 5) return "JXXXXXXXXXX";
         if(minutes === 10) return "JJXXXXXXXXX";
         if(minutes === 15) return "JJRXXXXXXXX";
+        if(minutes === 20) return "JJRJXXXXXXX";
         return "XXXXXXXXXXX";
     }
 }
