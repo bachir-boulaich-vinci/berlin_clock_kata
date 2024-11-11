@@ -58,7 +58,15 @@ export class Main {
     }
 
     getFiveHoursLine(hours){
-        if (hours === 5) return "RXXX";
-        return "XXXX";
+        let redCounter = Math.floor(hours / 5);
+        let result = "";
+        for (let i = 1; i <= 4; i++) {
+            if (redCounter >= i) {
+                result += "R";
+            } else {
+                result += "X";
+            }
+        }
+        return result;
     }
 }
