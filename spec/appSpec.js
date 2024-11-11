@@ -120,4 +120,9 @@ describe("Converting timestamp into Berlin Clock Kata", function(){
 
         expect(result).toBe("RRRR");
     });
+    it("Simple hours line: When hours are equals to 5", function(){
+        const result = main.getSimpleHoursLine(new Date("2024-11-01T05:00:00").getHours());
+
+        expect(result).toBe("XXXX");
+    });
 });
