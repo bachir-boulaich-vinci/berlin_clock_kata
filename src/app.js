@@ -7,13 +7,23 @@ export class Main {
         let yellowCounter = minutes % 5;
         let offCounter = 4 - yellowCounter;
         let result = "";
-        while(yellowCounter > 0){
-            result += "J";
-            yellowCounter--;
-        }
-        while(offCounter > 0){
+        result = this.turnOnYellowLights(yellowCounter, result);
+        result = this.turnOffYellowLights(offCounter, result);
+        return result;
+    }
+
+    turnOffYellowLights(offCounter, result) {
+        while (offCounter > 0) {
             result += "X";
             offCounter--;
+        }
+        return result;
+    }
+
+    turnOnYellowLights(yellowCounter, result) {
+        while (yellowCounter > 0) {
+            result += "J";
+            yellowCounter--;
         }
         return result;
     }
